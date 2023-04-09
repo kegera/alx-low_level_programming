@@ -1,20 +1,20 @@
 #include "main.h"
-#include<stdio.h>
+
 /**
- * print_binary - prints the binary representation of a number
- * @n: the number to convert to binary
+ * print_binary - Prints the binary representation of a number
+ * @n: Number to convert to binary
  *
  * Return: void
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int mask = 1;
-	unsigned int bits = sizeof(n) * 8;
+	unsigned int size = sizeof(unsigned long int) * 8;
 	int leading_zeros = 1;
 
-	while (bits--)
+	for (unsigned int i = 0; i < size; i++)
 	{
-		if ((n >> bits) & 1)
+		unsigned long int mask = (unsigned long int)1 << (size - i - 1);
+		if ((n & mask) != 0)
 		{
 			leading_zeros = 0;
 			_putchar('1');
