@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-
+#include<stdio.h>
 /**
  * write_text_to_file - Writes text to a file.
  * @filename: A pointer to the name of the file.
